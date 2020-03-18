@@ -1,0 +1,55 @@
+-- MySQL dump 10.13  Distrib 5.7.29, for Linux (x86_64)
+--
+-- Host: 127.0.0.1    Database: Wunderlist
+-- ------------------------------------------------------
+-- Server version	5.7.29-0ubuntu0.18.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `list`
+--
+
+DROP TABLE IF EXISTS `list`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `list` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `createdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `user_id` bigint(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `userId` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=160 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `list`
+--
+
+LOCK TABLES `list` WRITE;
+/*!40000 ALTER TABLE `list` DISABLE KEYS */;
+INSERT INTO `list` VALUES (113,'list 13','','2019-11-21 18:38:02',20),(116,'aaaa','','2019-11-25 05:53:42',20),(117,'list ','','2019-11-25 12:24:38',20),(118,'trai','','2019-12-01 11:10:25',20),(119,'hoho','iiojiojo','2019-12-05 14:19:12',20),(120,'gfgf','','2019-12-06 13:05:04',20),(121,'huudk',NULL,'2020-02-24 02:43:17',NULL),(122,'huudk',NULL,'2020-02-24 02:46:37',NULL),(123,'huudklkkkkkkkkkkkkk',NULL,'2020-02-24 03:02:06',NULL),(124,'huudklkkkkkkkkkkkkk','','2020-02-24 04:06:49',23),(129,'list of user testing',NULL,'2020-02-25 04:19:19',28),(151,'123123123',NULL,'2020-02-29 05:12:13',25),(155,'huudkkkkkkkkkkkkkkkk',NULL,'2020-03-02 03:40:49',25),(156,'dsd',NULL,'2020-02-29 05:26:40',44),(157,'qqqqqqqqqqqq',NULL,'2020-02-29 05:26:45',44),(158,'ewqewqewqeqeq',NULL,'2020-02-29 05:27:29',44),(159,'hung',NULL,'2020-03-02 03:21:37',25);
+/*!40000 ALTER TABLE `list` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-03-18 15:25:24

@@ -1,0 +1,58 @@
+-- MySQL dump 10.13  Distrib 5.7.29, for Linux (x86_64)
+--
+-- Host: 127.0.0.1    Database: Wunderlist
+-- ------------------------------------------------------
+-- Server version	5.7.29-0ubuntu0.18.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `task`
+--
+
+DROP TABLE IF EXISTS `task`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `task` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `status` tinyint(4) DEFAULT NULL,
+  `star` tinyint(4) DEFAULT NULL,
+  `createdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `duedate` varchar(100) DEFAULT NULL,
+  `reminder` varchar(100) DEFAULT NULL,
+  `list_id` bigint(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `listId` (`list_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `task`
+--
+
+LOCK TABLES `task` WRITE;
+/*!40000 ALTER TABLE `task` DISABLE KEYS */;
+INSERT INTO `task` VALUES (123,'test',0,0,'2019-12-06 13:02:59','2019-12-14','16:03',113),(124,'hung',1,0,'2019-12-06 13:04:08','2019-12-09','12:31',113),(126,'hhhhhhhhhhh',0,0,'2019-12-06 12:28:37','2019-12-26','17:55',117),(127,'asdasd',0,0,'2019-12-06 12:38:27','','',117),(128,'hhgh',0,1,'2019-12-06 13:04:10','','',113),(129,'task moi ne',0,0,'2020-02-24 05:21:53',NULL,NULL,113),(130,'da sua task',0,0,'2020-02-25 05:32:51',NULL,NULL,116),(131,'list of user testing',0,0,'2020-02-25 04:19:53','24/2/2020','8h30',129),(132,'hung',1,0,'2020-03-05 04:57:26','2020-03-04','11:33',159),(134,'task cua 155',0,1,'2020-03-03 10:44:51',NULL,NULL,155),(135,'asdasdasdasdas',0,1,'2020-03-11 07:03:43',NULL,NULL,159),(138,'huh d',1,1,'2020-03-04 11:17:47','2020-03-01','23:45',159),(139,'hung',0,0,'2020-03-18 08:17:38',NULL,'12:31',159),(141,'hugn',0,0,'2020-03-03 10:57:11',NULL,NULL,155),(142,'asdasd',1,1,'2020-03-03 10:42:37',NULL,NULL,155),(143,'asdasdasd',1,0,'2020-03-03 10:42:25',NULL,NULL,155),(144,'hung dep trai',0,0,'2020-03-18 08:18:07',NULL,NULL,159);
+/*!40000 ALTER TABLE `task` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-03-18 15:25:24
